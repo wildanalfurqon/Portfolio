@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <title>Wildan Alfurqon — Work Page</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="nav">
+              <a href="index.html" class="link">HOME</a>
+              <a href="#" class="link">→</a>
+              <a href="about.html" class="link">ABOUT</a>
+            </div>
+    </header>
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="kitchen-chairs-proportion.html">Kitchen Chairs Proportion</a></li>
+                <li><a href="pi-xel.html">PI-Xel</a></li>
+                <li><a href="a-cure-for-sanity.html">A Cure For Sanity</a></li>
+                <li><a href="praktikum.html">Praktikum</a></li>  
+                <li><a href="hypertext--transfer-protocol.html">Hypertext Transfer Protocol</a></li>
+                <li><a href="plug-and-find.html">Plug And Find</a></li>
+                <li><a href="in-this-play.html">In This Play</a></li>
+                <li><a href="social-distortions.html">Social Distortions</a></li>
+                <li><a href="https://www.behance.net/wildanalfurqon">Graphic Design Work</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </section>
+        <section class="content">
+            <h2>Kitchen Chairs Proportion</h2>
+            <p>Experimental Drawing</p>
+            <p>Mixed Media Installation<br>150 x 200 cm, 130 x 70 cm / 2020</p>
+            <p>Pada eksperimen bentuk dan metode sering kali memunculkan hasil yang mengejutkan dan memprovokasi. Salah satu pendekatan menarik dalam menggali kemungkinan kreatif adalah dengan mengimprovisasikan prinsip-prinsip klasik yang telah lama diterima, seperti golden ratio dalam proporsi tubuh manusia. Karya ini adalah contoh yang menggugah tentang bagaimana sebuah konsep dapat dipertanyakan dan dimodifikasi untuk menciptakan dialog baru.</p>
+            <p>Hal ini tidak hanya berfungsi sebagai kritik terhadap standar estetika yang ada, tetapi juga sebagai ajakan untuk memikirkan kembali bagaimana kita menentukan dan memahami keindahan dan proporsi. Dengan menggantikan panduan klasik dan mapan dengan objek yang lebih akrab dan sehari-hari, dengan menggarisbawahi bahwa estetika dan proporsi tidak selalu harus mengikuti aturan yang sudah mapan.</p>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co.com/qs8pRYw/k1.jpg" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/jfpcxDY/k2.jpg" alt="2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/w6rgprS/k3.jpg" alt="Description of image 3">
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <title>Wildan Alfurqon — About</title>
+    <link rel="stylesheet" href="about.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- nav -->
+      <div class="wrapper">
+        <div class="nav">
+          <a href="index.html" class="link">HOME</a>
+          <a href="#" class="link">→</a>
+          <a href="kitchen-chairs-proportion.html" class="link">WORK</a>
+        </div>
+      </div>
+
+      <!-- hero -->
+      <div class="product-hero">
+        <div class="product-header">
+          <p>Wildan Alfurqon (17 September 2001) Lives and works as an artist in Bandung. He studied at the Faculty of Art and Design at the Indonesian Institute of Arts and Culture in Bandung, majoring in Sculpture. His interest in technology, communication media, and social culture led him to explore the complexity of the relationship between humans and technology, based on his everyday experiences and discoveries.</p>
+          <p>Through his exploration of electronic software, design, and programming, he has developed an interest in art with a New Media Arts approach. His artistic practice can be described as a mediator between human-technology relations, focusing on everyday objects that are often considered unimportant. Instead, he notices imperfections and breakdowns in these relationships. In the end, the complexity of topics that are socially relevant but often disguised as trivial becomes new materials and new forms in the process and creation of the his artwork.</p>
+        </div>
+        <div class="product">
+          <div class="product-title">
+        
+          </div>
+          <div class="product-look">
+            <img src="Profile12.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- overlay -->
+      <div class="overlay"></div>
+
+      <!-- product description -->
+      <div class="product-description">
+        <div class="desc">
+          <p>Wildan Alfurqon ( 17 September 2001 ) Bekerja dan berkarya di bandung sebagai seorang seniman, Ia menempuh Pendidikan di Fakultas Seni Rupa dan Desain di Institut Seni Budaya Indonesia Bandung dengan major Seni Patung. Keteratikanya terhadap teknologi, media komunikasi dan budaya sosial membuat ia berupaya untuk menampilkan kompleksitas hubungan antara manusia dan teknologi yang berlandaskan pengalaman dan temuan-temuanya pada hal terdekat sehari-hari.</p>
+          <p>Melalui eksplorasi perangkat lunak elektronik, desain, dan pemrograman, ia telah mengembangkan minat dalam seni dengan pendekatan Seni Media Baru. Praktik artistiknya dapat digambarkan sebagai mediator antara hubungan manusia-teknologi, dengan fokus pada objek sehari-hari yang sering dianggap tidak penting. Sebaliknya, ia memperhatikan ketidaksempurnaan dan kerusakan dalam hubungan ini. Pada akhirnya, kompleksitas topik yang relevan secara sosial namun sering disamarkan sebagai hal sepele menjadi bahan baru dan bentuk baru dalam proses dan penciptaan karya seninya.</p>
+          <a href="https://drive.google.com/drive/folders/1c8bMsCi9by1oHh9BSVInwQmshrzcr3KK?usp=share_link" class="contact-link">&#8618; CV DOWNLOAD</a>
+        </div>
+        <div class="front-view view">
+          <div class="sketch-img"><img src="./" alt="" /></div>
+          <br />
+          <div class="sketch-title">
+            <span></span> <br />
+          </div>
+        </div>
+        <div class="side-view view">
+          <div class="sketch-title">
+            <span></span> <br />
+          </div>
+          <br />
+          <div class="sketch-img"><img src="./" alt="" /></div>
+        </div>
+        <div class="close-desc" id="close">
+          <ion-icon name="close-sharp"></ion-icon>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="product-info">
+        <div class="product-nav">
+          <div class="product-nav-links">
+            <button id="measurements">LOAD MORE</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    function showInfo() {
+      revealDescription();
+
+      const showBtn = document.getElementById("measurements");
+      showBtn.onclick = function (e) {
+        tl.reversed(!tl.reversed());
+      };
+
+      const closeBtn = document.getElementById("close");
+      closeBtn.onclick = function (e) {
+        tl.reversed(!tl.reversed());
+      };
+    }
+
+    showInfo();
+
+    function revealDescription() {
+      tl.to(".product-description", 1, {
+        bottom: 0,
+        ease: "power2.inOut",
+      });
+
+      tl.to(
+        ".overlay",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "-=1"
+      );
+
+      tl.to(
+        ".product-hero",
+        1,
+        {
+          bottom: "55vh",
+          ease: "power2.inOut",
+        },
+        "-=0.9"
+      ).reverse();
+    }
+
+    gsap.from(".nav > *", 1, {
+      y: 60,
+      opacity: 0,
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.2,
+      },
+    });
+
+    gsap.from(".product-hero > div, .product-info", 1, {
+      y: 60,
+      opacity: 0,
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.4,
+      },
+    });
+
+    gsap.from(".product-look img", 2, {
+      x: 100,
+      opacity: 0,
+      ease: "power3.inOut",
+      delay: 0.5,
+      stagger: {
+        amount: 0.4,
+      },
+    });
+  </script>
+</html>

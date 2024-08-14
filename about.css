@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
+    line-height: 110%;
+  }
+  
+  /* nav */
+  
+  .nav {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  letter-spacing: spx;
+  font-size: 24px;
+  margin: 0em;
+  padding-bottom: 10px;
+  }
+  
+  .nav > * {
+  
+  }
+  
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0px;
+    font-size: 24px;
+    margin: 1em;
+  }
+  
+  /* hero */
+  
+  .product-hero {
+    position: absolute;
+    bottom: 15vh;
+    width: 100%;
+    padding: 2em;
+    display: contents;
+    flex-direction: column;
+  }
+  
+  .product-hero > * {
+    position: relative;
+  }
+  
+  .product-hero p {
+    font-size: 24px;
+    width: 70%;
+    margin: 1em; ;
+    margin-bottom: 1em;
+    line-height: 100%;
+    text-align: justify;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product > * {
+    position: relative;
+  }
+  
+  .product-title h1 {
+    font-weight: 400;
+    font-size: 100px;
+    padding: 0.4em 0;
+  }
+  
+  .product-title {
+    font-size: 30px;
+  }
+  
+  .product-title span {
+    text-decoration: underline;
+  }
+  
+  .product-look {
+    position: relative;
+  }
+  
+  .product-look img {
+    width: 600px;
+  }
+  
+  @media (max-width: 900px) {
+    .product-hero p {
+      width: 335px;
+      font-size: 20px;
+      text-align: justify;
+    }
+  
+    .product-title h1 {
+      font-size: 40px;
+      padding: 0;
+    }
+  
+    .product-title {
+      font-size: 16px;
+    }
+  
+    .product-look img {
+      width: 50vw;
+    }
+  }
+  
+  /* overlay */
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  /* footer */
+  
+  .product-info {
+    position: absolute;
+    background: #ffffff;
+    bottom: -100px;
+    width: 100%;
+    padding: 1em;
+    border-top: 2px solid #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .product-nav,
+  .product-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-nav > * {
+    margin: 0 1em;
+  }
+  
+  .product-img {
+    width: 100px;
+  }
+  
+  .product-img img {
+    width: 100%;
+  }
+  
+  .product-name {
+    font-size: 24px;
+  }
+  
+  .product-name span {
+    font-size: 12px;
+  }
+  
+  .product-variants {
+    background: #fff;
+    padding: 0.5em 1em;
+    border-radius: 40px;
+    font-size: 14px;
+  }
+  
+  .product-nav-links {
+    margin: 0 4em;
+  }
+  
+  .product-nav-links > button {
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0 1em;
+    cursor: pointer;
+  }
+  
+  .product-btn button {
+    border: none;
+    outline: none;
+    background: #000;
+    color: #fff;
+    padding: 1.4em 2.8em;
+    border-radius: 40px;
+    margin-left: 2em;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 900px) {
+    .product-name,
+    .product-img,
+    .product-variants,
+    .product-nav-links > button:nth-child(2) {
+      display: none;
+    }
+  
+    .product-nav-links {
+      margin: 0;
+    }
+  }
+  
+  /* product-description */
+  
+  .product-description {
+    position: fixed;
+    width: 100%;
+    height: 50vh;
+    bottom: -50vh;
+    background: #ffffff;
+    border-top: 2px solid #000;
+    padding-bottom: 15vh;
+    display: flex;
+    font-size: 10px;
+    text-align: justify;
+  }
+  
+  .close-desc {
+    padding: 1em;
+    cursor: pointer;
+  }
+  
+  .desc {
+    flex: 1;
+    padding: 2em;
+  }
+  
+  .link {
+    margin: 2em 0;
+  }
+  
+  .link span::after {
+    position: relative;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000;
+  }
+  
+  .front-view,
+  .side-view {
+    flex: 2;
+  }
+  
+  .view {
+    padding: 2em 4em;
+  }
+  
+  .product-description img {
+    width: 400px;
+  }
+  
+  .sketch-title span {
+    font-weight: 500;
+  }
+  
+  @media (max-width: 900px) {
+    .front-view,
+    .side-view {
+      display: none;
+    }
+  }
+  

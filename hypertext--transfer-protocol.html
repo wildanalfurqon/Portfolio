@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <title>Wildan Alfurqon — Work Page</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="nav">
+              <a href="index.html" class="link">HOME</a>
+              <a href="#" class="link">→</a>
+              <a href="about.html" class="link">ABOUT</a>
+            </div>
+    </header>
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="kitchen-chairs-proportion.html">Kitchen Chairs Proportion</a></li>
+                <li><a href="pi-xel.html">PI-Xel</a></li>
+                <li><a href="a-cure-for-sanity.html">A Cure For Sanity</a></li>
+                <li><a href="praktikum.html">Praktikum</a></li>  
+                <li><a href="hypertext--transfer-protocol.html">Hypertext Transfer Protocol</a></li>
+                <li><a href="plug-and-find.html">Plug And Find</a></li>
+                <li><a href="in-this-play.html">In This Play</a></li>
+                <li><a href="social-distortions.html">Social Distortions</a></li>
+                <li><a href="https://www.behance.net/wildanalfurqon">Graphic Design Work</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </section>
+        <section class="content">
+            <h2>Hypertext Transfer Protocol</h2>
+            <p>Printed Thermal Paper on Zinc Plate</p>
+            <p>Heat Glo-Infrared Lamp, Custom Frame, Zinc Plate, Printed Thermal Paper.<br>57 x 76 cm / 2024</p>
+            <p>Fakta adalah hal yang dipercaya manusia dan dapat dibuktikan dengan indranya tetapi fakta dihasilkan melalui resepsi lensa penglihatan masing-masing orang. Keadaan ini menciptakan pertarungan antar fakta mulai dari individu dan kelompok-kelompok tertentu, tetapi pertarungan antar fakta acapkali dikontrol oleh penguasa untuk mempertahankan status quo atau untuk membuat fakta yang seolah-olah adalah suara rakyat.</p>
+            <p>Tahun politik menjadi sebuah momentum pertempuran fakta ditengah masyarakat. Pertempuran fakta terjadi karena adanya upaya untuk mempertahankan status quo penguasa. Upaya untuk mempertahankan status quo membuat masyarakat dibutakan oleh fakta-fakta yang kadang tak mampu ditelusuri kebenarannya. Keadaan ini semakin diperparah oleh cermatnya algoritma pada internet dapat memilah informasi sesuai dengan profil pengguna tanpa mempertimbangkan objektivitas informasi yang akan dikonsumsi sehingga membuat konsep fakta menjadi paradoks. Keadaan ini membuat kami tertarik untuk membahas peredaran fakta dan bagaimana proses fakta masuk ke dalam pikiran masyarakat.</p>
+            <p>Karya berjudul Hypertext Transfer Protocol merupakan hasil eksperimentasi media tentang banjirnya informasi mengenai pihak tertentu yang beredar di internet. Hal tersebut coba kami simulasikan dengan mencetak kode QR pada kertas thermal, kode QR ini merupakan sebuah pintu masuk yang dapat di akses menggunakan smartphone untuk melihat fakta-fakta yang beredar di internet. Ketika kode QR ini diakses akan menyebabkan perubahan algoritma berdasarkan profil pengguna pada platform media sosial sehingga menyebabkan terjadinya pergeseran fakta. Kemudian kode QR yang telah di cetak, disinari oleh lampu inframerah. Cahaya inframerah yang menyinari kertas thermal secara terus-menerus akan mengaburkan citra kode QR sehingga tak bisa lagi di akses menggunakan smartphone keadaan ini memunculkan karakteristik temporer pada kode QR—layaknya fakta-fakta yang beredar pada internet.</p>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co.com/dkH4VTh/HPYER.jpg" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/T22wNYj/HPYER2.png" alt="2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/MZZSFhW/HPYER3.png" alt="Description of image 3">
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

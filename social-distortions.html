@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <title>Wildan Alfurqon — Work Page</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="nav">
+              <a href="index.html" class="link">HOME</a>
+              <a href="#" class="link">→</a>
+              <a href="about.html" class="link">ABOUT</a>
+            </div>
+    </header>
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="kitchen-chairs-proportion.html">Kitchen Chairs Proportion</a></li>
+                <li><a href="pi-xel.html">PI-Xel</a></li>
+                <li><a href="a-cure-for-sanity.html">A Cure For Sanity</a></li>
+                <li><a href="praktikum.html">Praktikum</a></li>  
+                <li><a href="hypertext--transfer-protocol.html">Hypertext Transfer Protocol</a></li>
+                <li><a href="plug-and-find.html">Plug And Find</a></li>
+                <li><a href="in-this-play.html">In This Play</a></li>
+                <li><a href="social-distortions.html">Social Distortions</a></li>
+                <li><a href="https://www.behance.net/wildanalfurqon">Graphic Design Work</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </section>
+        <section class="content">
+            <h2>Social Distortions</h2>
+            <p>Augmented Reality Effect</p>
+            <p>Instagram Filter<br>2023</p>
+            <p>Di tengah maraknya pergeseran identitas digital dan pengaruh media sosial, "Social Distortions" muncul sebagai cerminan dari kekacauan dan fragmentasi yang terjadi dalam masyarakat saat ini. Karya ini memanfaatkan filter AR untuk menciptakan efek visual yang mengganggu, memperlihatkan bagaimana informasi dan citra yang dikonsumsi secara online sering kali terdistorsi. Filter ini mengubah wajah dan lingkungan pengguna dengan cara yang sering kali tidak realistis atau mencolok.</p>
+            <p>Karya ini menyoroti ketergantungan kita pada media sosial untuk membangun dan mempertahankan identitas. Dengan memperlihatkan bagaimana filter AR dapat memanipulasi tampilan dan persepsi kita. Informasi dan citra yang terus-menerus kita konsumsi ini bukan hanya sekadar estetika, ini adalah pernyataan yang tentang sejauh mana kita dapat mempertahankan keaslian diri di tengah arus informasi yang sering kali menyesatkan.</p>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co.com/PCqwDMk/ass.png" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/5vK6V4n/DEMO-EFFECT.gif" alt="2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/vcxkkpX/TUM-1.jpg" alt="Description of image 3">
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

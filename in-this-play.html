@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <title>Wildan Alfurqon — Work Page</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="nav">
+              <a href="index.html" class="link">HOME</a>
+              <a href="#" class="link">→</a>
+              <a href="about.html" class="link">ABOUT</a>
+            </div>
+    </header>
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li><a href="kitchen-chairs-proportion.html">Kitchen Chairs Proportion</a></li>
+                <li><a href="pi-xel.html">PI-Xel</a></li>
+                <li><a href="a-cure-for-sanity.html">A Cure For Sanity</a></li>
+                <li><a href="praktikum.html">Praktikum</a></li>  
+                <li><a href="hypertext--transfer-protocol.html">Hypertext Transfer Protocol</a></li>
+                <li><a href="plug-and-find.html">Plug And Find</a></li>
+                <li><a href="in-this-play.html">In This Play</a></li>
+                <li><a href="social-distortions.html">Social Distortions</a></li>
+                <li><a href="https://www.behance.net/wildanalfurqon">Graphic Design Work</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </section>
+        <section class="content">
+            <h2>In This Play</h2>
+            <p>Mixed Media Installation</p>
+            <p>Crt Monitor, Webcam, Computer Device, Open-CV Program<br>Various Dimension / 2024</p>
+            <p>Teknologi sebagai suatu perpanjangan dari manusia dan kebutuhannya. Teknologi yang selama ini dibuat bermaksud untuk mempermudah semua kegiatan manusia, dan perpanjangan dari panca indra kita atau bisa disebut bahwa teknologi kini berkembang berdasarkan proses duplikasi manusia terhadap dirinya. Setelah manusia berhasil memberi nyawa kepada benda dalam bentuk energi listrik kini manusia mulai mencoba memasukkan perasaan kedalam sebuah teknologi komputer yang disebut facial coding.</p>
+            <p>Facial coding adalah proses mengukur emosi manusia melalui ekspresi wajah. Emosi dapat dideteksi oleh algoritma komputer untuk pengenalan emosi otomatis yang merekam ekspresi wajah melalui webcam. Metode ini dapat diterapkan untuk pemahaman yang lebih baik tentang reaksi orang terhadap rangsangan visual. Facial coding terinspirasi dari prinsip media empatik yang pada dasarnya adalah sebagai rute menuju pengetahuan ‘diri’ dan bantuan terkait pembacaan emosi yang ada pada manusia.</p>
+            <p>In this play adalah proyek seni yang bertujuan untuk merfleksi diri melalui teknologi komputer. Proses refleksi agaknya acapkali dilupakan oleh manusia kini, padahal proses refleksi dapat menjadi wadah pemahaman serta pengendalian diri. Kami menghadirkan sebuah instalasi video realtime dimana citraan pengunjung akan direkam melalui webcam kemudian diproyeksikan kedalam monitor tabung yang akan menampilkan wajah orang tersebut, tetapi gambar wajah orang itu akan dideteksi oleh AI. Kehadiran AI di karya ini untuk membaca emosi fundamental manusia yaitu kebahagiaan dan kesedihan. Kami menjadikan monitor ini sebagai cermin untuk publik melakukan monolog terhadap dirinya. Kami ingin merespon distopia teknologi yang tadinya memberi jarak antara manusia dan ‘diri’ kini menjadi alat untuk merfleksi diri.</p>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="https://i.ibb.co.com/5K1gdLR/I1-1.png" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/tCFvjgx/I1-2.png" alt="2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ibb.co.com/6HmwdjR/IMG-5703.gif" alt="Description of image 3">
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
